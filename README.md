@@ -26,7 +26,7 @@ also, it has various uses beyond waiting for data responses.
 provides both package installation and a CDN.
 <br />
 
-> refer to the CDN below.
+- refer to the CDN below.
 
 ```html
 <!-- latest version -->
@@ -103,7 +103,7 @@ Vanilla JS
           // process response error...
         })
         .finally(() => {
-          Indicatoring.close(); // required if no limit arguments.
+          Indicatoring.close(); // required if no limit arguments
         });
     }
   </script>
@@ -132,7 +132,7 @@ class App extends React.Component {
         // process response error...
       })
       .finally(() => {
-        Indicatoring.close(); // required if no limit.
+        Indicatoring.close(); // required if no limit
       });
   };
 
@@ -175,7 +175,7 @@ export default {
           // process response error...
         })
         .finally(() => {
-          Indicatoring.close(); // required if no limit.
+          Indicatoring.close(); // required if no limit
         });
     },
   },
@@ -215,7 +215,7 @@ export class AppComponent {
         // process response error...
       })
       .finally(() => {
-        Indicatoring.close(); // required if no limit.
+        Indicatoring.close(); // required if no limit
       });
   }
 }
@@ -242,11 +242,11 @@ arguments will be added through updates.
 
 ```javascript
 Indicatoring.open(
-  6000, // indicating duration of 6 seconds. (in m/s)
+  6000, // indicating duration of 6 seconds (in m/s)
   {
     background: {
-      color: 'rgba(20, 20, 20, 0.4)', // change background color.
-      blur: true, // background blur or not
+      color: 'rgba(20, 20, 20, 0.4)', // change background color
+      blur: true, // background blur effect or not
     },
     circle: {
       color: '#f1f2f3', // circular icon color
