@@ -13,11 +13,11 @@
 
 <br />
 
-## Synopsis
+## Description
 
 indicatoring module is a spinner for response waiting.
 <br />
-it is simple, easy to use, and customizable through set some arguments.
+simple, easy to use, and can be customized with some of the arguments provided.
 <br />
 circular indicators can be added or removed at want locations.
 <br />
@@ -26,14 +26,12 @@ also, it has various uses beyond waiting for data responses.
 provides both package installation and a CDN.
 <br />
 
-- refer to the CDN below.
-
 ```html
 <!-- latest version -->
 <script src="https://cdn.jsdelivr.net/npm/indicatoring/dist/index.js"></script>
 
 <!-- X.X.X version -->
-<script src="https://cdn.jsdelivr.net/npm/indicatoring@1.0.0/dist/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/indicatoring@1.0.1/dist/index.js"></script>
 ```
 
 <br/>
@@ -52,7 +50,7 @@ use Indicatoring.open() to begin and Indicatoring.close() to finish.
 <br />
 to prevent flickering, the Indicator does not run if Indicatoring.close() is called within 300 milliseconds of Indicatoring.open().
 <br />
-if the limit arguments is used, Indicatoring.close() can be omitted.
+if you use the limit argument, you can omit Indicatoring.close() because it automatically closes when the time expires.
 
 <br />
 <br />
@@ -228,29 +226,38 @@ export class AppComponent {
 
 ## Arguments
 
-| Argument | Object Name | Key Name | Type                           | Default Value        |
-| -------- | ----------- | -------- | ------------------------------ | -------------------- |
-| limit    | -           | -        | Number                         | 0                    |
-| config   | background  | color    | String                         | "rgba(0, 0, 0, 0.6)" |
-|          |             | blur     | Boolean                        | false                |
-|          | circle      | color    | "large" or "medium" or "small" | "medium"             |
-|          |             | size     | String                         | "#ffffff"            |
+| Argument | Object Name | Key Name | Value Type                     | Default Value        | Required |
+| -------- | ----------- | -------- | ------------------------------ | -------------------- | -------- |
+| limit    | -           | -        | Number                         | 0                    | optional |
+| config   | background  | color    | String                         | "rgba(0, 0, 0, 0.6)" | optional |
+|          |             | blur     | Boolean                        | false                | optional |
+|          | message     | color    | String                         | "#fff"               | optional |
+|          |             | size     | "large" or "medium" or "small" | "medium"             | optional |
+|          |             | text     | String or NULL                 | NULL                 | optional |
+|          | icon        | color    | String                         | "#fff"               | optional |
+|          |             | size     | "large" or "medium" or "small" | "#medium"            | optional |
 
 all arguments are optional and apply arguments as shown below.
 <br />
 arguments will be added through updates.
+the code below is an example of declaring all the arguments provided.
 
 ```javascript
 Indicatoring.open(
-  6000, // indicating duration of 6 seconds (in m/s)
+  6000,  // indicating duration of 6 seconds. (in m/s)
   {
     background: {
-      color: 'rgba(20, 20, 20, 0.4)', // change background color
-      blur: true, // background blur effect or not
+      color: 'rgba(20, 20, 20, 0.4)',  // change background color.
+      blur: true,  // background blur effect or not.
     },
-    circle: {
-      color: '#f1f2f3', // circular icon color
-      size: 'large', // circular icon size
+    message: {
+      color: 'red',  // text message font color.
+      size: 'small',  // text message font size.
+      text: 'Wait Please..'  // text message content.
+    }
+    icon: {
+      size: 'large',  // circular icon size.
+      color: '#f1f2f3',  // circular icon color.
     },
   }
 );

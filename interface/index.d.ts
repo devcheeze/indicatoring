@@ -3,7 +3,12 @@ export interface IndicatoringProps {
         color?: string;
         blur?: boolean;
     };
-    circle?: {
+    message?: {
+        size?: 'small' | 'medium' | 'large';
+        color?: string;
+        text?: string;
+    };
+    icon?: {
         size?: 'small' | 'medium' | 'large';
         color?: string;
     };
@@ -15,7 +20,12 @@ export interface IndicatoringDefaultProps {
             color: string;
             blur: boolean;
         };
-        circle: {
+        message: {
+            size: string;
+            color: string;
+            text: string | null;
+        };
+        icon: {
             color: string;
             size: string;
         };
