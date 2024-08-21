@@ -31,7 +31,7 @@ provides both package installation and a CDN.
 <script src="https://cdn.jsdelivr.net/npm/indicatoring/dist/index.js"></script>
 
 <!-- X.X.X version -->
-<script src="https://cdn.jsdelivr.net/npm/indicatoring@1.0.1/dist/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/indicatoring@1.0.2/dist/index.js"></script>
 ```
 
 <br/>
