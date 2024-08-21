@@ -235,7 +235,7 @@ export class AppComponent {
 |          |             | size     | "large" or "medium" or "small" | "medium"             | optional |
 |          |             | text     | String or NULL                 | NULL                 | optional |
 |          | icon        | color    | String                         | "#fff"               | optional |
-|          |             | size     | "large" or "medium" or "small" | "#medium"            | optional |
+|          |             | size     | "large" or "medium" or "small" | "medium"             | optional |
 
 all arguments are optional and apply arguments as shown below.
 <br />
