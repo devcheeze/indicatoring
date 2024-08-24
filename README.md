@@ -31,7 +31,7 @@ provides both package installation and a CDN.
 <script src="https://cdn.jsdelivr.net/npm/indicatoring/dist/index.js"></script>
 
 <!-- X.X.X version -->
-<script src="https://cdn.jsdelivr.net/npm/indicatoring@1.0.2/dist/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/indicatoring@1.0.3/dist/index.js"></script>
 ```
 
 <br/>
@@ -57,7 +57,7 @@ if you use the limit argument, you can omit Indicatoring.close() because it auto
 
 ## Examples
 
-available in all JavaScript libraries and frameworks
+available in major JavaScript libraries and frameworks
 
 <details>
 <summary>
@@ -83,7 +83,7 @@ Vanilla JS
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="http://132.226.23.243:9900/indicatoring/dist/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/indicatoring/dist/index.js"></script>
   </head>
   <body>
     <div>
@@ -244,20 +244,20 @@ the code below is an example of declaring all the arguments provided.
 
 ```javascript
 Indicatoring.open(
-  6000,  // indicating duration of 6 seconds. (in m/s)
+  6000, // indicating duration of 6 seconds. (in m/s)
   {
     background: {
-      color: 'rgba(20, 20, 20, 0.4)',  // change background color.
-      blur: true,  // background blur effect or not.
+      color: 'rgba(20, 20, 20, 0.4)', // change background color.
+      blur: true, // background blur effect or not.
     },
     message: {
-      color: 'red',  // text message font color.
-      size: 'small',  // text message font size.
-      text: 'Wait Please..'  // text message content.
-    }
+      color: 'red', // text message font color.
+      size: 'small', // text message font size.
+      text: 'Wait Please..', // text message content.
+    },
     icon: {
-      size: 'large',  // circular icon size.
-      color: '#f1f2f3',  // circular icon color.
+      size: 'large', // circular icon size.
+      color: '#f1f2f3', // circular icon color.
     },
   }
 );
